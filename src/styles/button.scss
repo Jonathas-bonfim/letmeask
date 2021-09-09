@@ -1,0 +1,44 @@
+.button {
+  height: 50px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: #835afd;
+  color: #FFF;
+  // para o texto nunca grudar nas laterais
+  padding: 0 32px;
+
+  display: flex;
+  // alinhamento Horizontal
+  justify-content: center;
+  // alinhamento vertical
+  align-items: center;
+
+  // cursor muda informando que será direcionado
+  cursor: pointer;
+  border: 0;
+
+  transition: filter 0.2s;
+
+  img{
+    // distancia a imagem do texto
+    margin-right: 8px;
+  }
+
+  &.outlined {
+    background: #FFF;
+    border: 1px solid #835afd;
+    color: #835afd;
+  }
+
+  // efeito o botão quando o mouse está em cima
+  // abaixo de 1 escurece, acima de 1 clareia
+  // só irá aplicar o efeito caso o botão não esteja desabilitado
+  &:not(:disabled)hover {
+    filter: brightness(1.1);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
