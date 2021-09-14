@@ -104,7 +104,6 @@ export function AdminRoom() {
                 >
                   <img src={deleteImg} alt="Remover Pergunta" />
                 </button>
-
               </Question>
             )
           })}
